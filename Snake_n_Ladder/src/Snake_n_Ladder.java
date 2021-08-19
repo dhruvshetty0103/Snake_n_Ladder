@@ -27,20 +27,20 @@ public class Snake_n_Ladder {
 			else if(option==2)
 			{	
 				die_number=randInt(1,6);
-				//if((personPosition+die_number)>100)
-					//personPosition=100;
-				//else
-					personPosition+=die_number;
-				System.out.println("Ladder:Player moves to position number:"+personPosition);
+				if((personPosition+die_number)>100)
+					personPosition=personPosition;
+				
+				personPosition+=die_number;
+				System.out.println("Ladder:Player moves to position number:"+personPosition+"as dice number"+die_number);
 			}
 			else
 			{
 				die_number=randInt(1,6);
-				//if((personPosition-die_number)<0)
-				//	personPosition=0;
-				//else
+				if((personPosition-die_number)<0)
+					personPosition=0;
+				else
 					personPosition-=die_number;
-				System.out.println("Snake:Player moves to position number:"+personPosition);
+				System.out.println("Snake:Player moves to position number:"+personPosition+"as dice number"+die_number);
 			}
 		}
 	}
