@@ -41,7 +41,7 @@ public class Snake_n_Ladder {
 			{
 				die_number=randInt(1,6);
 				if((personPosition-die_number)<0)//condition to check when the dice asks to move back below position 0 
-					personPosition=0;
+						personPosition=0;
 				else
 					personPosition-=die_number;
 				System.out.println("Snake:Player moves to position number:"+personPosition+"--as dice number"+die_number);
